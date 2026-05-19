@@ -3,148 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>雅丹 | 个人作品集</title>
+  <title>雅丹 | 作品集</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<!-- 头部主页 -->
-<header class="header">
-  <div class="container">
-    <h1>你好，我是雅丹</h1>
-    <p>烟火日常，静观市场，随性执笔写生活</p>
-    <a href="#articles" class="btn">阅览原创文章</a>
-  </div>
-</header>
-
-<!-- 关于我 -->
-<section class="about" id="about">
-  <div class="container">
-    <h2>关于我</h2>
-    <p>不执着钻研代码，偏爱观察人间百态。一边深耕财经市场积累认知，一边书写日常心绪，在理性思考与感性生活里慢慢前行。</p>
-  </div>
-</section>
-
-<!-- 文章专栏区域 -->
-<section class="articles" id="articles">
-  <div class="container">
-    <h2>原创文章专栏</h2>
-
-    <!-- 财经市场专栏 -->
-    <div class="column">
-      <h3>📈 财经市场专栏</h3>
-      <div class="article-list">
-        <div class="article-item" onclick="openArticle(1)">
-          <h4>方向看哪里？调整到了哪一步？</h4>
-          <p class="art-desc">市场趋势与行业逻辑深度分析</p>
-          <div class="art-info">
-            <span class="date">2026-05-19</span>
-            <span class="view">阅读 1289</span>
-          </div>
-        </div>
-        <div class="article-item" onclick="openArticle(2)">
-          <h4>震荡行情下的心态修炼</h4>
-          <p class="art-desc">精简简介：稳住节奏比追逐收益更重要</p>
-          <div class="art-info">
-            <span class="date">2026-05-18</span>
-            <span class="view">阅读 865</span>
-          </div>
-        </div>
-        <div class="article-item" onclick="openArticle(3)">
-          <h4>小额定投长期思维随笔</h4>
-          <p class="art-desc">精简简介：慢慢积累，时间自有答案</p>
-          <div class="art-info">
-            <span class="date">2026-05-17</span>
-            <span class="view">阅读 723</span>
-          </div>
-        </div>
+  <div class="layout">
+    <!-- 左侧侧边栏 -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>雅丹</h1>
+        <p>市场观察 · 投研笔记</p>
       </div>
-    </div>
+      <nav class="nav">
+        <a href="#home" class="nav-item active">
+          <span>🏠</span> 首页
+        </a>
+        <a href="#finance" class="nav-item">
+          <span>📈</span> 财经专栏
+        </a>
+        <a href="#essay" class="nav-item">
+          <span>✍️</span> 随笔
+        </a>
+        <a href="#about" class="nav-item">
+          <span>👤</span> 关于我
+        </a>
+      </nav>
+    </aside>
 
-    <!-- 个人随笔专栏 -->
-    <div class="column">
-      <h3>✍️ 个人生活随笔</h3>
-      <div class="article-list">
-        <div class="article-item" onclick="openArticle(4)">
-          <h4>奔赴生活，慢慢自愈</h4>
-          <p class="art-desc">精简简介：接纳平凡，认真过好每一天</p>
-          <div class="art-info">
-            <span class="date">2026-05-16</span>
-            <span class="view">阅读 956</span>
+    <!-- 右侧主内容区 -->
+    <main class="main">
+      <!-- 首页 -->
+      <section id="home" class="page active">
+        <div class="banner">
+          <div class="banner-text">
+            <h1>雅丹投研</h1>
+            <p>理性观察市场，沉淀投研思考<br>专注AI算力、科技产业链研究</p>
+            <div class="banner-buttons">
+              <button onclick="goTo('finance')" class="btn">📈 财经专栏</button>
+            </div>
           </div>
         </div>
-        <div class="article-item" onclick="openArticle(5)">
-          <h4>职场行路，沉淀自我</h4>
-          <p class="art-desc">精简简介：向内深耕，从容前行</p>
-          <div class="art-info">
-            <span class="date">2026-05-15</span>
-            <span class="view">阅读 682</span>
+      </section>
+
+      <!-- 财经专栏 -->
+      <section id="finance" class="page">
+        <div class="section-header">
+          <h2>财经专栏</h2>
+          <p>AI算力、科技产业、市场复盘</p>
+        </div>
+        <div class="article-list" id="financeList"></div>
+      </section>
+
+      <!-- 随笔（暂空） -->
+      <section id="essay" class="page">
+        <div class="section-header">
+          <h2>随笔</h2>
+          <p>生活感悟 · 日常记录</p>
+        </div>
+        <div class="article-list">
+          <div class="article-card">
+            <p>随笔内容后续更新...</p>
           </div>
         </div>
-        <div class="article-item" onclick="openArticle(6)">
-          <h4>独处亦是人间清欢</h4>
-          <p class="art-desc">精简简介：安静度日，丰盈内心</p>
-          <div class="art-info">
-            <span class="date">2026-05-14</span>
-            <span class="view">阅读 1024</span>
-          </div>
+      </section>
+
+      <!-- 关于我 -->
+      <section id="about" class="page">
+        <div class="about-content">
+          <h2>关于我</h2>
+          <p>专注AI算力、半导体、机器人、新能源等科技产业链研究，记录市场逻辑与产业思考。</p>
+          <p>邮箱：yadan@163.com</p>
         </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- 文章弹窗 -->
+  <div class="article-popup" id="popup">
+    <div class="popup-box">
+      <span class="close-btn" onclick="closeArticle()">×</span>
+      <h3 id="artTitle"></h3>
+      <div class="popup-info">
+        <span id="popDate"></span>
+        <span id="popView"></span>
       </div>
+      <div class="art-content" id="artContent"></div>
     </div>
   </div>
-</section>
 
-<!-- 技能板块 -->
-<section class="skills" id="skills">
-  <div class="container">
-    <h2>个人擅长</h2>
-    <div class="skill-list">
-      <div>市场观察</div>
-      <div>文案写作</div>
-      <div>日常感悟</div>
-      <div>内容整理</div>
-    </div>
-  </div>
-</section>
-
-<!-- 个人作品 -->
-<section class="projects" id="projects">
-  <div class="container">
-    <h2>个人原创作品</h2>
-    <div class="project-card">
-      <h3>个人专属作品集网页</h3>
-      <p>自主搭建简约风格个人主页，整合文章、简介、日常内容，用作个人形象展示与内容收纳。</p>
-    </div>
-  </div>
-</section>
-
-<!-- 联系方式 -->
-<section class="contact" id="contact">
-  <div class="container">
-    <h2>联系我</h2>
-    <p>日常交流 / 文稿探讨 均可留言沟通</p>
-    <p>邮箱：yadan@163.com</p>
-  </div>
-</section>
-
-<!-- 底部 -->
-<footer>
-  <div class="container">© 2026 雅丹个人作品集  All Rights Reserved</div>
-</footer>
-
-<!-- 文章弹窗层 -->
-<div class="article-popup" id="popup">
-  <div class="popup-box">
-    <span class="close-btn" onclick="closeArticle()">×</span>
-    <h3 id="artTitle"></h3>
-    <div class="popup-info">
-      <span id="popDate"></span>
-      <span id="popView"></span>
-    </div>
-    <div class="art-content" id="artContent"></div>
-  </div>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
