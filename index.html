@@ -3,62 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>我的个人作品集</title>
+  <title>雅丹 | 个人作品集</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <h1>你好，我是 雅丹</h1>
-      <p>一个打工人</p>
-      <a href="#projects" class="btn">查看我的作品</a>
-    </div>
-  </header>
 
-  <section class="about" id="about">
-    <div class="container">
-      <h2>关于我</h2>
-      <p>一点也不热爱编程，喜欢我看不懂！！！</p>
-    </div>
-  </section>
+<!-- 头部主页 -->
+<header class="header">
+  <div class="container">
+    <h1>你好，我是雅丹</h1>
+    <p>烟火日常，静观市场，随性执笔写生活</p>
+    <a href="#articles" class="btn">阅览原创文章</a>
+  </div>
+</header>
 
-  <section class="skills" id="skills">
-    <div class="container">
-      <h2>我的技能</h2>
-      <div class="skill-list">
-        <div>HTML</div>
-        <div>CSS</div>
-        <div>JavaScript</div>
-        <div>Git</div>
+<!-- 关于我 -->
+<section class="about" id="about">
+  <div class="container">
+    <h2>关于我</h2>
+    <p>不执着钻研代码，偏爱观察人间百态。一边深耕财经市场积累认知，一边书写日常心绪，在理性思考与感性生活里慢慢前行。</p>
+  </div>
+</section>
+
+<!-- 文章专栏区域 -->
+<section class="articles" id="articles">
+  <div class="container">
+    <h2>原创文章专栏</h2>
+
+    <!-- 财经市场专栏 -->
+    <div class="column">
+      <h3>📈 财经市场专栏</h3>
+      <div class="article-list">
+        <div class="article-item" onclick="openArticle(1)">
+          <h4>普通投资者的市场生存法则</h4>
+          <p>精简简介：理性控仓，拒绝情绪化交易</p>
+        </div>
+        <div class="article-item" onclick="openArticle(2)">
+          <h4>震荡行情下的心态修炼</h4>
+          <p>精简简介：稳住节奏比追逐收益更重要</p>
+        </div>
+        <div class="article-item" onclick="openArticle(3)">
+          <h4>小额定投长期思维随笔</h4>
+          <p>精简简介：慢慢积累，时间自有答案</p>
+        </div>
       </div>
     </div>
-  </section>
 
-  <section class="projects" id="projects">
-    <div class="container">
-      <h2>我的作品</h2>
-      <div class="project-card">
-        <h3>个人作品集网页</h3>
-        <p>使用 HTML + CSS + JS 制作的响应式个人主页</p>
-      </div>
-      <div class="project-card">
-        <h3>待添加</h3>
-        <p>未来会放更多项目</p>
+    <!-- 个人随笔专栏 -->
+    <div class="column">
+      <h3>✍️ 个人生活随笔</h3>
+      <div class="article-list">
+        <div class="article-item" onclick="openArticle(4)">
+          <h4>奔赴生活，慢慢自愈</h4>
+          <p>精简简介：接纳平凡，认真过好每一天</p>
+        </div>
+        <div class="article-item" onclick="openArticle(5)">
+          <h4>职场行路，沉淀自我</h4>
+          <p>精简简介：向内深耕，从容前行</p>
+        </div>
+        <div class="article-item" onclick="openArticle(6)">
+          <h4>独处亦是人间清欢</h4>
+          <p>精简简介：安静度日，丰盈内心</p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2>联系我</h2>
-      <p>邮箱：your-email@example.com</p>
+<!-- 技能板块 -->
+<section class="skills" id="skills">
+  <div class="container">
+    <h2>个人擅长</h2>
+    <div class="skill-list">
+      <div>市场观察</div>
+      <div>文案写作</div>
+      <div>日常感悟</div>
+      <div>内容整理</div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <div class="container">© 2025 我的作品集</div>
-  </footer>
+<!-- 个人作品 -->
+<section class="projects" id="projects">
+  <div class="container">
+    <h2>个人原创作品</h2>
+    <div class="project-card">
+      <h3>个人专属作品集网页</h3>
+      <p>自主搭建简约风格个人主页，整合文章、简介、日常内容，用作个人形象展示与内容收纳。</p>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- 联系方式 -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>联系我</h2>
+    <p>日常交流 / 文稿探讨 均可留言沟通</p>
+    <p>邮箱：yadan@163.com</p>
+  </div>
+</section>
+
+<!-- 底部 -->
+<footer>
+  <div class="container">© 2026 雅丹个人作品集  All Rights Reserved</div>
+</footer>
+
+<!-- 文章弹窗层 -->
+<div class="article-popup" id="popup">
+  <div class="popup-box">
+    <span class="close-btn" onclick="closeArticle()">×</span>
+    <h3 id="artTitle"></h3>
+    <div class="art-content" id="artContent"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
