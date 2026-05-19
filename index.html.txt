@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>我的个人作品集</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>你好，我是 XXX</h1>
+      <p>专注前端 / 设计 / 编程，热爱创造好看又好用的作品</p>
+      <a href="#projects" class="btn">查看我的作品</a>
+    </div>
+  </header>
+
+  <section class="about" id="about">
+    <div class="container">
+      <h2>关于我</h2>
+      <p>热爱编程，喜欢从零搭建网页，持续学习中。这是我的个人代表作网页。</p>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2>我的技能</h2>
+      <div class="skill-list">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>JavaScript</div>
+        <div>Git</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2>我的作品</h2>
+      <div class="project-card">
+        <h3>个人作品集网页</h3>
+        <p>使用 HTML + CSS + JS 制作的响应式个人主页</p>
+      </div>
+      <div class="project-card">
+        <h3>待添加</h3>
+        <p>未来会放更多项目</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>联系我</h2>
+      <p>邮箱：your-email@example.com</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© 2025 我的作品集</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
