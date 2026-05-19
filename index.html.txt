@@ -10,7 +10,7 @@
   <header class="header">
     <div class="container">
       <h1>你好，我是 尹雅丹</h1>
-      <p>专注前端 / 设计 / 编程，热爱创造好看又好用的作品</p>
+      <p>我是女生</p>
       <a href="#projects" class="btn">查看我的作品</a>
     </div>
   </header>
