@@ -8,80 +8,67 @@
 </head>
 <body>
   <div class="layout">
-    <!-- 左侧侧边栏 -->
-    <aside class="sidebar" id="sidebar">
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
       <div class="sidebar-header">
         <h1>雅丹</h1>
         <p>市场观察 · 投研笔记</p>
       </div>
       <nav class="nav">
-        <a href="#home" class="nav-item active" onclick="goTo('home')">
-          <span>🏠</span> 首页
-        </a>
-        <a href="#finance" class="nav-item" onclick="goTo('finance')">
-          <span>📈</span> 财经专栏
-        </a>
-        <a href="#essay" class="nav-item" onclick="goTo('essay')">
-          <span>✍️</span> 随笔
-        </a>
-        <a href="#about" class="nav-item" onclick="goTo('about')">
-          <span>👤</span> 关于我
-        </a>
+        <a href="#home" class="nav-item active" onclick="goTo('home')">🏠 首页</a>
+        <a href="#finance" class="nav-item" onclick="goTo('finance')">📈 财经专栏</a>
+        <a href="#essay" class="nav-item" onclick="goTo('essay')">✍️ 随笔</a>
+        <a href="#about" class="nav-item" onclick="goTo('about')">👤 关于我</a>
       </nav>
     </aside>
 
-    <!-- 移动端菜单按钮 -->
-    <button class="menu-toggle" id="menuToggle" onclick="toggleSidebar()">☰</button>
-
-    <!-- 右侧主内容区 -->
+    <!-- 主内容 -->
     <main class="main">
       <!-- 首页 -->
       <section id="home" class="page active">
         <div class="banner">
           <div class="banner-text">
             <h1>雅丹投研</h1>
-            <p>理性观察市场，沉淀投研思考<br>专注AI算力、科技产业链研究</p>
-            <div class="banner-buttons">
-              <button onclick="goTo('finance')" class="btn">📈 财经专栏</button>
-            </div>
+            <p>理性观察市场，沉淀投研思考</p>
+            <button onclick="goTo('finance')" class="btn">📈 进入财经专栏</button>
           </div>
         </div>
       </section>
 
-      <!-- 财经专栏 -->
+      <!-- 财经 -->
       <section id="finance" class="page">
         <div class="section-header">
           <h2>财经专栏</h2>
-          <p>AI算力、科技产业、市场复盘</p>
+          <p>市场复盘、产业逻辑、投研思考</p>
         </div>
         <div class="article-list" id="financeList"></div>
       </section>
 
-      <!-- 随笔（暂空） -->
+      <!-- 随笔 -->
       <section id="essay" class="page">
         <div class="section-header">
           <h2>随笔</h2>
-          <p>生活感悟 · 日常记录</p>
+          <p>生活记录 · 个人感悟</p>
         </div>
         <div class="article-list">
           <div class="article-card">
-            <p>随笔内容后续更新...</p>
+            <p>随笔内容后续添加</p>
           </div>
         </div>
       </section>
 
-      <!-- 关于我 -->
+      <!-- 关于 -->
       <section id="about" class="page">
         <div class="about-content">
           <h2>关于我</h2>
-          <p>专注AI算力、半导体、机器人、新能源等科技产业链研究，记录市场逻辑与产业思考。</p>
+          <p>专注AI算力、半导体、机器人、新能源等科技产业链研究。</p>
           <p>邮箱：yadan@163.com</p>
         </div>
       </section>
     </main>
   </div>
 
-  <!-- 文章弹窗 -->
+  <!-- 弹窗 -->
   <div class="article-popup" id="popup">
     <div class="popup-box">
       <span class="close-btn" onclick="closeArticle()">×</span>
