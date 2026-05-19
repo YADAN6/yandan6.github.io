@@ -3,32 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>雅丹 | 作品集</title>
+  <title>雅丹 | 投研作品集</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="layout">
     <!-- 左侧侧边栏 -->
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <h1>雅丹</h1>
         <p>市场观察 · 投研笔记</p>
       </div>
       <nav class="nav">
-        <a href="#home" class="nav-item active">
+        <a href="#home" class="nav-item active" onclick="goTo('home')">
           <span>🏠</span> 首页
         </a>
-        <a href="#finance" class="nav-item">
+        <a href="#finance" class="nav-item" onclick="goTo('finance')">
           <span>📈</span> 财经专栏
         </a>
-        <a href="#essay" class="nav-item">
+        <a href="#essay" class="nav-item" onclick="goTo('essay')">
           <span>✍️</span> 随笔
         </a>
-        <a href="#about" class="nav-item">
+        <a href="#about" class="nav-item" onclick="goTo('about')">
           <span>👤</span> 关于我
         </a>
       </nav>
     </aside>
+
+    <!-- 移动端菜单按钮 -->
+    <button class="menu-toggle" id="menuToggle" onclick="toggleSidebar()">☰</button>
 
     <!-- 右侧主内容区 -->
     <main class="main">
